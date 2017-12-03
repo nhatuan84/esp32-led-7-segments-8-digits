@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map EspLed7SegNDigit
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EspLed7SegNDigit	KEYWORD1	EspLed7SegNDigit
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setCharAt       KEYWORD2
+setRefreshTime  KEYWORD2
+displayNum      KEYWORD2
+clearDisplay    KEYWORD2
+setUpdateCb    KEYWORD2
+loop            KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
