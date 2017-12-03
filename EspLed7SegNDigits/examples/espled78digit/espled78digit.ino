@@ -9,6 +9,10 @@ float num = 0.12;
 EspLed7SegNDigit ledm(SCLK, RCLK, DIO, 8);
 
 void updateDisplayCb(void){
+  ledm.clearDisplay();
+  ledm.setCharAt(8, 'd');
+  ledm.setCharAt(7, 's');
+  ledm.setCharAt(6, 't');
   num = num + 1;
   ledm.displayNum(num);
 }
