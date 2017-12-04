@@ -30,15 +30,16 @@ class EspLed7SegNDigit
         void low(void);
         void scan_led(void);
         int mapToSeg(unsigned char chr);
+        
     public: 
         EspLed7SegNDigit(int SCLK, int RCLK, int DIO, int numOfDigits = 8);
         ~EspLed7SegNDigit();
         int setCharAt(int pos, unsigned char chr);
         int setRefreshTime(int ms);
-        void displayNum(float num);
+        void displayNum(float number, int nrBehindDot);
         void setUpdateCb(updateDisplay cb);
-        void loop(void);
         void clearDisplay(void);
+        void loop(void);
 };
 
 #endif
