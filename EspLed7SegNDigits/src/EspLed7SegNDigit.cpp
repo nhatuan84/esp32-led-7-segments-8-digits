@@ -190,28 +190,17 @@ int EspLed7SegNDigit::setRefreshTime(int ms){
 
 void EspLed7SegNDigit::displayNum(float number, int nrBehindDot){
     int pos = 0;
-    char str[5];
-    char newFm[15];
-    memset(str, 0, 5);
-    memset(newFm, 0, 15);
-    memcpy(newFm, FORMAT, strlen(FORMAT));
-    if(nrBehindDot < numOfDigits-2) {
-        sprintf(str, "%df", nrBehindDot);
-        for(int i=0;i<15; i++){
-            if(newFm[i] == '4'){
-                for(int j=0; j<strlen(str); j++){
-                    newFm[i+j] = str[j];
-                }
-                break;
-            }
-        }
-        nrBehindDot = nrBehindDot;
-    }else {
-        nrBehindDot = numBehindDot;
+    char newFm[8];
+    memset(newFm, 0, 8);
+    if(nrBehindDot > numOfDigits-2) {
+        nrBehindDot = 4;
     }
-
-    char buf[numOfDigits+nrBehindDot];
+    newFm[0] = '%';
+    newFm[1] = '.';
+    sprintf(&newFm[2], "%df", nrBehindDot);
+    char buf[numOfDigits+nrBehindDot+2];
     sprintf(buf, newFm, number);
+
     int len = strlen(buf);  
 
     for(int i=len-1; i>=0; i--){
