@@ -1,3 +1,6 @@
+/*
+    Tuan Nguyen (http://www.iotsharing.com) or (nha.tuan84@gmail.com)
+*/
 #include <Arduino.h>
 #include "EspLed7SegNDigit.h"
 
