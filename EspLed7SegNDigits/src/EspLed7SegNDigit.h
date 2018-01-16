@@ -1,3 +1,7 @@
+/*
+    Tuan Nguyen (http://www.iotsharing.com) or (nha.tuan84@gmail.com)
+*/
+
 #ifndef EspLed7SegNDigit_H
 #define EspLed7SegNDigit_H
 
